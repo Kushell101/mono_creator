@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mono Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="root" class="hidden">
+
+        <aside class="panel">
+            <nav id="rail" class="rail"></nav>
+
+            <div class="main">
+                <header class="head">
+                    <div class="head-top">
+                        <span class="brand">Monoskrypt RP</span>
+                        <button id="cancel" class="btn ghost small">Wróć</button>
+                    </div>
+                    <h1 id="title"></h1>
+                    <p id="subtitle" class="sub"></p>
+                    <div class="progress"><i id="progress"></i></div>
+                </header>
+
+                <div id="content" class="content"></div>
+
+                <footer class="foot">
+                    <button id="back" class="btn">Wstecz</button>
+                    <button id="random" class="btn ghost">Losuj</button>
+                    <button id="next" class="btn primary">Dalej</button>
+                </footer>
+            </div>
+
+            <div id="busy" class="busy hidden"><span class="spinner"></span><span>Ładowanie…</span></div>
+        </aside>
+
+        <section id="stage" class="stage">
+            <div class="stage-hint">Przeciągnij, aby obrócić · kółko myszy: zoom · Ctrl+Z: cofnij</div>
+            <div id="dock" class="dock"></div>
+        </section>
+
+        <div id="toasts" class="toasts"></div>
+
+        <div id="outfit-name-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="outfit-name-title">
+            <div class="modal-card">
+                <span class="modal-kicker">ZAPIS STROJU</span>
+                <h2 id="outfit-name-title">Nadaj nazwę zestawowi</h2>
+                <p>Strój będzie dostępny później w opcji „Załóż zapisane ubranie”.</p>
+                <input id="outfit-name-input" type="text" maxlength="24" autocomplete="off" placeholder="np. Mundur patrolowy">
+                <div class="modal-actions">
+                    <button id="outfit-name-cancel" class="btn ghost" type="button">Anuluj</button>
+                    <button id="outfit-name-save" class="btn primary" type="button">Zapisz ubranie</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
